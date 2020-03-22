@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
     AS profilesCount
     FROM quotes
     `)
-cpnsole.log('count:::', count[0])
+console.log('count:::', count[0])
   const { profilesCount } = count[0]
 //   const pageCount = Math.ceil(profilesCount / limit)
 console.log('profilesCount', profilesCount)

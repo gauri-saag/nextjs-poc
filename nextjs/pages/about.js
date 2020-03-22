@@ -6,7 +6,7 @@ AboutPage.getInitialProps = async ({ req, query }) => {
     ? `${req.headers['x-forwarded-proto']}:`
     : location.protocol
   const host = req ? req.headers['x-forwarded-host'] : location.host
-  const pageRequest = `https://localhost:3306/api/index`
+  const pageRequest = `http://localhost:3000/api/index`
   const res = await fetch(pageRequest)
   const json = await res.json()
   return json
@@ -45,8 +45,10 @@ AboutPage.getInitialProps = async ({ req, query }) => {
 //   );
 // }
 
-export default function AboutPage({pageCount }) {
+export default function AboutPage(props) {
+  console.log("PROPS ===>>>", props)
+  
   return (
- <div>{pageCount}</div>     
+ <div>{props.profilesCount}</div>     
   )
 }

@@ -25,7 +25,7 @@ function Copyright() {
 }
 
 export default function Index() {
-  const { data, error } = useSWR('/api/randomQuotes', fetcher);
+  const { data, error } = useSWR('/api', fetcher);
   const author = data && data.author;
   let quote = data && data.quote;
 

@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "clsx": "latest",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",

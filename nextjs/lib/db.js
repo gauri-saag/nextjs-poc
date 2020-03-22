@@ -2,10 +2,10 @@ const mysql = require('serverless-mysql')
 
 const db = mysql({
   config: {
-    host: '127.0.0.1',
-    database: 'quotesdb',
-    user: 'root',
-    password: 'root'
+    host: 'remotemysql.com',
+    database: 'p9pmJmMPsj',
+    user: 'p9pmJmMPsj',
+    password: 'DJEKnH7O1C'
   }
 })
 
