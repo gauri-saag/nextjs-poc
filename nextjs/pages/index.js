@@ -26,11 +26,11 @@ function Copyright() {
 
 export default function Index() {
   const { data, error } = useSWR('/api/randomQuotes', fetcher);
-  // const author = data && data.author;
-  // let quote = data && data.quote;
+  const author = data && data.author;
+  let quote = data && data.quote;
 
-  // if (!data) quote = 'Loading...';
-  // if (error) quote = 'Failed to fetch the quote.';
+  if (!data) quote = 'Loading...';
+  if (error) quote = 'Failed to fetch the quote.';
 
   return (
     <Container maxWidth="sm">
@@ -42,8 +42,8 @@ export default function Index() {
           Go to the about page
         </Link>
         <p>From static json::</p>
-        {/* <div>{quote}</div>
-        <span>- {author}</span> */}
+        <div>{quote}</div>
+        <span>- {author}</span>
         <ProTip />
         <Copyright />
       </Box>
